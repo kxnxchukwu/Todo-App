@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo App/title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+<div class = "container mt-3">
+
+    <div class="d-flex justify-content-center">
+    
+        <div>
+            <h2 class="text-primary">
+                Get life under control...
+            </h2>
+            <h3 class="text-primary">with an app that reminds you to get things done!</h3>
+            <br/>
+
+            <label class="mb-0" for="new-task"><h4 class="mt-2 mb-0 text-dark">Add Item</h4></label>
+            <hr>
+            <input type ="text" class = "form-control form-control-lg mb-2" placeholder="What Needs to be Done?" id = "new-task" onkeypress="check()">
+            <button type="submit" class = "btn btn-outline-dark" onclick="addTask()"> Add Task!</button>
+            
+            <h4 class="mb-0 mt-2 text-warning">Todo</h4>
+            <hr>
+            <ul class ="list-group incomplete-tasks mb-2" id ="incomplete-tasks">
+            <li class="list-group-item list-group-item-warning mb-1 mt-1"><input type="checkbox" onclick="toCheck(this.id)" id=" Play Music!"> Play Music!<span class="fa fa-trash" style="float: right; color: red;" onclick="deleteInput(this.parentNode)"></span></li>
+            </ul>
+
+            <h4 class="mb-0 mb-2 text-success">Completed</h4>
+            <hr>
+            <ul class ="list-group completed-tasks mb-2" id ="completed-tasks">
+                <li class="list-group-item list-group-item-success mb-1 mt-1"><input type="checkbox" checked onclick="toUncheck(this.id)" id=" Pay Bills"> Pay Bills<span class="fa fa-trash" style="float: right; color: red;" onclick="deleteInput(this.parentNode)"></span></li>
+            </ul>
+        </div>
+       </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
